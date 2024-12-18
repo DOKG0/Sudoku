@@ -1,0 +1,116 @@
+.difficulty-display {
+    font-weight: bold;
+    color: #2196F3;
+}
+
+.timer {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#sudoku-board {
+    display: grid;
+    grid-template-columns: repeat(9, 1fr);
+    gap: 1px;
+    background-color: #999;
+    border: 2px solid #333;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.cell {
+    aspect-ratio: 1;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.cell:hover {
+    background-color: #e0e0e0;
+}
+
+.cell.selected {
+    background-color: #bbdefb;
+}
+
+.cell.fixed {
+    font-weight: bold;
+    background-color: #f5f5f5;
+}
+
+.cell.error {
+    color: red;
+}
+
+.cell.hint {
+    background-color: #c8e6c9;
+    color: #2e7d32;
+}
+
+.controls {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.number-buttons {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 0.5rem;
+    max-width: 300px;
+}
+
+.number-buttons button,
+.action-buttons button {
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.number-buttons button {
+    background-color: #2196F3;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.action-buttons button {
+    padding: 0.5rem 1rem;
+    background-color: #4CAF50;
+}
+
+.change-difficulty-btn {
+    background-color: #9C27B0 !important; 
+}
+
+.hint-btn {
+    background-color: #FF9800 !important;
+}
+
+
+.cell:nth-child(3n) {
+    border-right: 2px solid #333;
+}
+
+.cell:nth-child(9n) {
+    border-right: none;
+}
+
+.cell:nth-child(n+19):nth-child(-n+27),
+.cell:nth-child(n+46):nth-child(-n+54) {
+    border-bottom: 2px solid #333;
+}

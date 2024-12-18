@@ -1,0 +1,32 @@
+.welcome-screen {
+    text-align: center;
+}
+
+.welcome-screen input,
+.welcome-screen select {
+    padding: 0.5rem;
+    margin: 1rem 0;
+    width: 200px;
+    font-size: 1rem;
+}
+
+.difficulty-selector {
+    margin: 1rem 0;
+}
+
+.welcome-screen button {
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
