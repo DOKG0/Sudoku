@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sudoku</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/sudoku.css">
+    <link rel="stylesheet" href="css/score.css">
+</head>
+<body>
+    <div class="container">
+        <div class="welcome-screen" id="welcomeScreen">
+            <h1>Bienvenido al Sudoku</h1>
+            <input type="text" id="nickname" placeholder="Ingresa tu nickname" maxlength="15">
+            <div class="difficulty-selector">
+                <h3>Selecciona la dificultad:</h3>
+                <select id="difficulty">
+                    <option value="easy">Principiante</option>
+                    <option value="normal">Normal</option>
+                    <option value="hard">Difícil</option>
+                </select>
+            </div>
+            <button onclick="startGame()">Comenzar Juego</button>
+        </div>
+
+        <div class="game-screen" id="gameScreen" style="display: none;">
+            <div class="header">
+                <h2>Jugador: <span id="playerName"></span></h2>
+                <div class="difficulty-display">Dificultad: <span id="difficultyDisplay"></span></div>
+                <div class="timer">Tiempo: <span id="timer">00:00</span></div>
+            </div>
+
+            <div class="sudoku-container">
+                <div id="sudoku-board"></div>
+                <div class="controls">
+                    <div class="number-buttons">
+                        <button onclick="selectNumber(1)">1</button>
+                        <button onclick="selectNumber(2)">2</button>
+                        <button onclick="selectNumber(3)">3</button>
+                        <button onclick="selectNumber(4)">4</button>
+                        <button onclick="selectNumber(5)">5</button>
+                        <button onclick="selectNumber(6)">6</button>
+                        <button onclick="selectNumber(7)">7</button>
+                        <button onclick="selectNumber(8)">8</button>
+                        <button onclick="selectNumber(9)">9</button>
+                        <button onclick="selectNumber(0)">Borrar</button>
+                    </div>
+                    <div class="action-buttons">
+                        <button onclick="getHint()" class="hint-btn">Ayuda</button>
+                        <button onclick="checkSolution()">Verificar</button>
+                        <button onclick="newGame()">Nuevo Juego</button>
+                        <button onclick="changeDifficulty()" class="change-difficulty-btn">Cambiar Dificultad</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="scoreboard">
+                <h3>Tabla de Puntajes</h3>
+                <button onclick="clearScores()" class="clear-scores-btn">Limpiar Puntajes</button>
+                <div id="scores"></div>
+            </div>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
